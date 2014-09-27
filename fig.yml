@@ -1,0 +1,26 @@
+whoami:
+  image: jwilder/whoami
+  ports:
+    - "8000"
+
+register:
+  image: jwilder/docker-register
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+  environment:
+    HOST_IP:
+    ETCD_HOST:
+
+discover:
+  image: jwilder/docker-discover
+  ports:
+    - "127.0.0.1:1936:1936"
+  environment:
+    ETCD_HOST:
+  net: "host"
+
+etcd:
+  image: coreos/etcd
+  ports:
+    - "4001:4001"
+    - "7001:7001"
