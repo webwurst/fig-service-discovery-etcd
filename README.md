@@ -1,7 +1,7 @@
 Service Discovery Using etcd and HAProxy
 ========================================
 
-Based on Jason Wilders blog post [Docker Service Discovery Using Etcd and Haproxy}(http://jasonwilder.com/blog/2014/07/15/docker-service-discovery/).
+Based on Jason Wilders blog post [Docker Service Discovery Using Etcd and Haproxy](http://jasonwilder.com/blog/2014/07/15/docker-service-discovery/).
 
     $ git clone https://github.com/webwurst/fig-service-discovery-etcd.git
     $ cd fig-service-discovery-etcd
@@ -15,4 +15,4 @@ Based on Jason Wilders blog post [Docker Service Discovery Using Etcd and Haprox
 
     $ fig scale whoami=3
 
-Now reload http://localhost:8000/ several times while bypassing browser cache (ctrl+shift+r).
+Now reload `http://localhost:8000/` several times. Bypass browser cache by pressing `ctrl+shift+r`.
